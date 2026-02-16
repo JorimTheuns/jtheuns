@@ -1,0 +1,81 @@
+---
+import { Image } from "astro:assets";
+import Section from "./Section.astro";
+import Part from "./Part.astro";
+import collage from "../../assets/intro/Collage5-03-min.png";
+import jorim from "../../assets/intro/jorim.jpeg";
+import code from "../../assets/intro/code.png";
+
+const theme = {
+  bg: "#000203",
+  text: "#F0D3D5",
+  link: "#CA8F91",
+  highlight: "#C7A192",
+  border: "#F0D3D5",
+};
+---
+
+<Section title="Jorim Theuns" theme={theme}>
+  <!-- Part 1: Hero / Peek -->
+  <Part variant="peek">
+    <div class="flex flex-col justify-end h-[50vh] pt-16 pb-4">
+      <h1 class="title">Hi there,</h1>
+      <h3>I'm a research driven designer who's obsessed with information: data that <span class="highlight">makes a difference.</span></h3>
+      <br />
+      <div class="h-8 w-full relative overflow-hidden">
+        <p class="animate-scroll-hor text-xs leading-6 h-6">Scroll horizontally to navigate parts</p>
+      </div>
+    </div>
+    <div class="flex flex-col justify-start h-[50vh] pt-4 pb-20">
+      <div class="h-8 w-full relative overflow-hidden">
+        <p class="animate-scroll-vert text-xs leading-6 h-6">Scroll vertically to navigate sections</p>
+      </div>
+      <br />
+      <p>Step one: always follow the data. Map the <a href="https://en.wikipedia.org/wiki/Systems_theory">system</a> and stay curious, don't get tempted <a href="https://en.wikipedia.org/wiki/Map%E2%80%93territory_relation">to fit the data to a model.</a> Step two: action. Communicate with clarity and <a href="https://president.yale.edu/president/speeches/compassion-and-cooperation-change">compassion</a>, using <a href="https://en.wikipedia.org/wiki/Antifragile">antifragility</a> to make systems that get stronger over time.</p>
+      <br />
+      <p>Tip: If you're using a mouse, you can scroll horizontally by holding shift while you scroll.</p>
+    </div>
+  </Part>
+
+  <!-- Part 2: Full-width collage image -->
+  <Part>
+    <div class="flex flex-col justify-center h-dvh pt-16 pb-20">
+      <Image src={collage} alt="Project collage" class="h-full w-auto object-contain" />
+    </div>
+  </Part>
+
+  <!-- Part 3: About me -->
+  <Part>
+    <div class="flex flex-col justify-end h-[50vh] pt-16 pb-4">
+      <Image src={jorim} alt="Jorim Theuns" class="w-40 h-40 rounded-full object-cover" />
+    </div>
+    <div class="flex flex-col justify-start h-[50vh] pt-4 pb-20">
+      <h1>About me</h1>
+      <p>Recent graduate, fired up and motivated to make an impact in forward thinking, people-focused organisations.</p>
+      <br />
+      <p>I've studied at a <a href="https://www.utwente.nl/en/education/bachelor/programmes/creative-technology/">techy uni</a> and an <a href="https://www.designacademy.nl/p/study-at-dae/masters/information-design">off the rails design school</a>. Worked in <a href="https://dailyhive.com/vancouver/bennys-cafe-closed-owner?auto=true">cafe's</a> and in <a href="https://www.uipath.com/">big-tech</a>. I'm a brainstorming sketchbook addict, trying to maximise model evidence.</p>
+      <br />
+      <p>Dutch citizen, born in London '96</p>
+      <br />
+      <a href="mailto:jorim.theuns@gmail.com">
+        <h3>Interested? Let's talk.</h3>
+      </a>
+    </div>
+  </Part>
+
+  <!-- Part 4: Colophon -->
+  <Part variant="section-start">
+    <div class="flex flex-col justify-center h-dvh pt-16 pb-20">
+      <h1>Colophon</h1>
+      <h3>This website was designed and coded with love by Jorim Theuns.</h3>
+      <Image src={code} alt="Code screenshot" class="my-4 max-w-full" />
+      <h3>Big thanks to:</h3>
+      <br />
+      <p>Evelien Nieuwenburg, Matus Solcany, Angela Tziafeta and Pranav Muppirishetti for their feedback and encouragement.</p>
+      <br />
+      <h3>Technologies used:</h3>
+      <br />
+      <p>Brackets code editior, Github pages, HTML, CSS, JavaScript, Jquery, P5.js, D3.js, three.js, Adobe Suite, Aframe.</p>
+    </div>
+  </Part>
+</Section>
