@@ -18,6 +18,10 @@ pnpm-debug.log*
 .env
 .env.production
 
+# large media files (videos/audio) - deploy separately or use LFS
+public/video/*.mp4
+public/video/*.m4a
+
 # macOS-specific files
 .DS_Store
 

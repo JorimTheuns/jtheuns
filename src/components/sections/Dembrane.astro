@@ -1,0 +1,599 @@
+---
+import { Image } from "astro:assets";
+import Section from "./Section.astro";
+import Part from "./Part.astro";
+
+// Image imports
+import projectorTable from "../../assets/dembrane/Projector table.png";
+import randomWalk from "../../assets/dembrane/Random Walk edit-03.png";
+import theFoolCopy from "../../assets/dembrane/the fool copy.png";
+import theFool from "../../assets/dembrane/the fool.png";
+import randomRadio from "../../assets/dembrane/Random_Radio.png";
+import randomRadioScreenshot from "../../assets/dembrane/RandomRadio.png";
+import monolithChair from "../../assets/dembrane/monolith_chair.jpg";
+import lorenzAttractor from "../../assets/dembrane/Lorenz Attractor.png";
+import barneslyRandom from "../../assets/dembrane/barnesly-random.jpg";
+import barneslyTime from "../../assets/dembrane/barnesly-time.jpg";
+import barneslyNoise from "../../assets/dembrane/barnesly-noise.jpg";
+import barneslyChaos from "../../assets/dembrane/barnesly-chaos.jpg";
+import strangeDemocracyCover from "../../assets/dembrane/Strange-Democracy-Cover.png";
+import usVsThem from "../../assets/dembrane/Us-vs-Them.png";
+import deliberativePanel from "../../assets/dembrane/deliberative panel-01.png";
+import storyboard from "../../assets/dembrane/Storyboard-01.png";
+import flowDiagram from "../../assets/dembrane/Flow.png";
+
+const theme = {
+  bg: "#F3F4F6",
+  text: "#2B2B27",
+  link: "#F27EB4",
+  highlight: "#000",
+  border: "#2B2B27",
+};
+---
+
+<Section title="Dembrane" theme={theme}>
+  <!-- Title part -->
+  <Part variant="peek">
+    <div class="flex flex-col justify-end h-[50vh] pt-16 pb-4">
+      <a href="https://dembrane.com">
+        <h1 class="title">Dembrane</h1>
+      </a>
+      <h1>or New E-Democracy</h1>
+    </div>
+    <div class="flex flex-col justify-start h-[50vh] pt-4 pb-20">
+      <h3>Dembrane is a deliberation and consensus-building platform designed to help governments harness the collective ingenuity of their constituents.</h3>
+      <br />
+      <h3>Dembrane was concieved during my masters thesis at <a href="https://www.designacademy.nl/p/study-at-dae/masters/information-design">DAE</a> under the title <span class="highlight">Strange Democracy.</span></h3>
+    </div>
+  </Part>
+
+  <!-- Intro video -->
+  <Part>
+    <div class="flex flex-col justify-center h-dvh pt-16 pb-20">
+      <video controls playsinline preload="auto" poster="/video/dembrane-poster-04.jpg" class="max-h-[calc(100vh-144px)] w-auto max-w-[calc(100vw-32px)]">
+        <source src="/video/Dembrane-intro.mp4" type="video/mp4" />
+      </video>
+    </div>
+  </Part>
+
+  <!-- The Story - Contents overview -->
+  <Part>
+    <div class="flex flex-col justify-end h-[50vh] pt-16 pb-4">
+      <h1 class="title">The Story</h1>
+    </div>
+    <div class="flex flex-col justify-start h-[50vh] pt-4 pb-20">
+      <h1>Contents, overview.</h1>
+      <p>Hint: Click the pink links to read more!</p>
+    </div>
+  </Part>
+
+  <!-- Contents: Part 1 -->
+  <Part>
+    <div class="flex flex-col justify-center h-dvh pt-16 pb-20 max-w-[500px]">
+      <h1><a href="#part1">Part 1: Origins</a></h1>
+      <h2>Politics, culture and information</h2>
+      <Image src={projectorTable} alt="Projector table" class="mt-4 max-w-full" />
+    </div>
+  </Part>
+
+  <!-- Contents: Part 2 -->
+  <Part>
+    <div class="flex flex-col justify-center h-dvh pt-16 pb-20 max-w-[500px]">
+      <h1><a href="#part2">Part 2: Eureka v1</a></h1>
+      <h2 class="mb-4">Sortition, Elections &amp; Polarisation</h2>
+      <iframe src="/sketches/balls.html" class="w-full h-[300px] border-none" loading="lazy" title="Sortition simulation"></iframe>
+    </div>
+  </Part>
+
+  <!-- Contents: Part 3 -->
+  <Part>
+    <div class="flex flex-col justify-end h-[50vh] pt-16 pb-4 max-w-[500px]">
+      <h1><a href="#part3">Part 3: Interviews</a></h1>
+      <h2>Willingness to compromise</h2>
+    </div>
+    <div class="flex flex-col justify-start h-[50vh] pt-4 pb-20 max-w-[500px]">
+      <h2 class="quote italic">"...most of the people on the city council are incompetent and stubborn..."</h2>
+      <p class="mt-2 opacity-70">- Member of the Eindhoven City Council</p>
+    </div>
+  </Part>
+
+  <!-- Contents: Part 4 -->
+  <Part>
+    <div class="flex flex-col justify-center h-dvh pt-16 pb-20 max-w-[500px]">
+      <h1><a href="#part4">Part 4: Field work</a></h1>
+      <h2 class="mb-4">A podcast episode on the psychological effects of random decision making.</h2>
+      <Image src={randomWalk} alt="Random Walk poster" class="max-w-full" />
+    </div>
+  </Part>
+
+  <!-- Contents: Part 5 -->
+  <Part>
+    <div class="flex flex-col justify-center h-dvh pt-16 pb-20 max-w-[500px]">
+      <h1><a href="#part5">Part 5: Apophenia</a></h1>
+      <h2 class="mb-4">Randomised narratives with Tarot</h2>
+      <Image src={theFoolCopy} alt="The Fool tarot card" class="max-w-full" />
+    </div>
+  </Part>
+
+  <!-- Contents: Part 6 -->
+  <Part>
+    <div class="flex flex-col justify-center h-dvh pt-16 pb-20 max-w-[500px]">
+      <h1><a href="#part6">Part 6: Random Media</a></h1>
+      <h2 class="mb-4">Onze Zetels and Random Radio</h2>
+      <Image src={randomRadio} alt="Random Radio" class="max-w-full" />
+    </div>
+  </Part>
+
+  <!-- Contents: Part 7 -->
+  <Part>
+    <div class="flex flex-col justify-center h-dvh pt-16 pb-20 max-w-[500px]">
+      <h1><a href="#part7">Part 7: Chaos theory</a></h1>
+      <h2 class="mb-4">Is randomness chaotic?</h2>
+      <iframe src="/sketches/lorenz.html" class="w-full h-[300px] border-none" loading="lazy" title="Lorenz attractor"></iframe>
+    </div>
+  </Part>
+
+  <!-- Contents: Part 8 -->
+  <Part>
+    <div class="flex flex-col justify-center h-dvh pt-16 pb-20 max-w-[500px]">
+      <h1><a href="#part8">Part 8: Fractals</a></h1>
+      <h2 class="mb-4">Experiments with fractal fonts</h2>
+      <iframe src="/sketches/barnsleyS.html" class="w-full h-[300px] border-none" loading="lazy" title="Barnsley fern S"></iframe>
+    </div>
+  </Part>
+
+  <!-- Contents: Part 9 -->
+  <Part>
+    <div class="flex flex-col justify-center h-dvh pt-16 pb-20 max-w-[500px]">
+      <h1><a href="#part9">Part 9: Randomisation</a></h1>
+      <h2 class="mb-4">Randomised control trials and the Monte Carlo method</h2>
+      <iframe src="/sketches/recurrence.html" class="w-full h-[300px] border-none" loading="lazy" title="Recurrence plots"></iframe>
+    </div>
+  </Part>
+
+  <!-- Contents: Part 10 -->
+  <Part>
+    <div class="flex flex-col justify-end h-[50vh] pt-16 pb-4 max-w-[500px]">
+      <h1><a href="#part10">Part 10: Interviews</a></h1>
+      <h2 class="mb-4">Connecting the dots</h2>
+    </div>
+    <div class="flex flex-col justify-start h-[50vh] pt-4 pb-20 max-w-[500px]">
+      <h2 class="quote italic">"...having many randomly selected panels could expand the bandwidth of democracy..."</h2>
+      <p class="mt-2 opacity-70">- Hubertus Hofkirchner</p>
+    </div>
+  </Part>
+
+  <!-- Contents: Continued notice -->
+  <Part>
+    <div class="flex flex-col justify-end h-[50vh] pt-16 pb-4 max-w-[500px]">
+      <h1>Part 10 onwards to be <a href="#continued">continued.</a></h1>
+    </div>
+    <div class="flex flex-col justify-start h-[50vh] pt-4 pb-20 max-w-[500px]">
+      <h2>Portfolio content will be updated soon!</h2>
+    </div>
+  </Part>
+
+  <!-- Contents: Part 11 -->
+  <Part>
+    <div class="flex flex-col justify-center h-dvh pt-16 pb-20 max-w-[500px]">
+      <h1><a href="#part11">Part 11: Panel Discussion</a></h1>
+      <h2 class="mb-4">Broadband democracy</h2>
+      <Image src={deliberativePanel} alt="Deliberative panel" class="max-w-full" />
+    </div>
+  </Part>
+
+  <!-- Contents: Part 12 -->
+  <Part>
+    <div class="flex flex-col justify-center h-dvh pt-16 pb-20 max-w-[500px]">
+      <h1><a href="#part12">Part 12: A Constitution</a></h1>
+      <h2 class="mb-4">Randomness and symmetry</h2>
+      <iframe src="/sketches/doughnut.html" class="w-full h-[300px] border-none" loading="lazy" title="Doughnut sketch"></iframe>
+    </div>
+  </Part>
+
+  <!-- Contents: Part 13 -->
+  <Part>
+    <div class="flex flex-col justify-center h-dvh pt-16 pb-20 max-w-[500px]">
+      <h1><a href="#part13">Part 13: Telling the story</a></h1>
+      <h2 class="mb-4">Simplifying the narrative</h2>
+      <Image src={storyboard} alt="Storyboard" class="max-w-full" />
+    </div>
+  </Part>
+
+  <!-- Contents: Part 14 -->
+  <Part>
+    <div class="flex flex-col justify-center h-dvh pt-16 pb-20 max-w-[500px]">
+      <h1><a href="#part14">Part 14: Where to from here?</a></h1>
+      <h2 class="mb-4">Service architecture</h2>
+      <Image src={flowDiagram} alt="Service architecture flow" class="max-w-full" />
+    </div>
+  </Part>
+
+  <!-- ===================== DEEP DIVE PARTS ===================== -->
+
+  <!-- Part 1: Origins -->
+  <Part variant="section-start" id="part1">
+    <div class="flex flex-col justify-end h-[50vh] pt-16 pb-4">
+      <h1 class="title">Origins</h1>
+    </div>
+    <div class="flex flex-col justify-start h-[50vh] pt-4 pb-20">
+      <h1>Politics, culture and information.</h1>
+    </div>
+  </Part>
+
+  <Part>
+    <div class="flex flex-col justify-center h-dvh pt-16 pb-20">
+      <h1>QI on Sortition</h1>
+      <p class="mb-4">I didn't know it at the time, but my thesis started serendipitously, as I watched the BBC show QI.</p>
+      <video controls playsinline preload="auto" poster="/video/QI_poster.png" class="max-h-[calc(100vh-144px)] w-auto max-w-[calc(100vw-32px)]">
+        <source src="/video/QI_sortition.mp4" type="video/mp4" />
+      </video>
+      <p class="mt-4">Sorition, allthough very intruiging, did not immediatly lead me to further research. It was archived in my mind, and didn't resurface for years.</p>
+    </div>
+  </Part>
+
+  <Part>
+    <div class="flex flex-col justify-end h-[50vh] pt-16 pb-4">
+      <h1>Antifragile Politics</h1>
+      <Image src={usVsThem} alt="Us vs Them" class="max-w-full mt-2" />
+    </div>
+    <div class="flex flex-col justify-start h-[50vh] pt-4 pb-20">
+      <p>In 2018, a project of mine at DAE culminated in a film called: "Noi Contro Loro". It was about how a far-right politician in Italy used social media to present an authentic imago, all the while optimising their posts to maximise traction. I realised that part of what made the politcian succesful was that they proudly displayed attacks against them and they profited from they chaos they themselves engineered - They were <a href="https://en.wikipedia.org/wiki/Antifragility">antifragile</a>. Instead of contribute to the cacophony by publishing the film, I realised that working on the hidden layer - the root cause - might be more productive.</p>
+    </div>
+  </Part>
+
+  <Part>
+    <div class="flex flex-col justify-end h-[50vh] pt-16 pb-4">
+      <h1>What is the root?</h1>
+      <p>I asked myself: What if political polarisation is a symptom of an underlying, structural problem? Is there a root cause? If so, what is it? What would be an effective way to tackle it?</p>
+    </div>
+    <div class="flex flex-col justify-start h-[50vh] pt-4 pb-20">
+      <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2F2oqz471sa19h3vbwa53m33yj-wpengine.netdna-ssl.com%2Fwp-content%2Fuploads%2F2019%2F09%2Fus-political-polarization-crop.gif&f=1&nofb=1" alt="US political polarization over time" class="max-w-full" />
+    </div>
+  </Part>
+
+  <!-- Part 2: Eureka -->
+  <Part variant="section-start" id="part2">
+    <div class="flex flex-col justify-end h-[50vh] pt-16 pb-4">
+      <h1 class="title">Eureka!</h1>
+    </div>
+    <div class="flex flex-col justify-start h-[50vh] pt-4 pb-20">
+      <h3>Linking Sortition to the question of polarisisation sparked a series of increasingly divergent and explorative, mini projects.</h3>
+    </div>
+  </Part>
+
+  <Part>
+    <div class="flex flex-col justify-end h-[50vh] pt-16 pb-4">
+      <h1>Political theory - Deep dive</h1>
+    </div>
+    <div class="flex flex-col justify-start h-[50vh] pt-4 pb-20">
+      <p class="mt-4">Not having a great deal of experience in political theory, I needed to immerse myself in the field, and in the current state of the literature on Sortition. I summarised my initial findings in a <a href="/assets/dembrane/8-reasons_small.pdf">large format research poster</a> that would help me understand sortition in more detail.</p>
+    </div>
+  </Part>
+
+  <Part>
+    <div class="flex flex-col justify-end h-[50vh] pt-16 pb-4">
+      <h1>Visualising sortition</h1>
+      <p class="mb-4">To explore sortition more intuitively, I simulated a political microcosm to compare the information flow under various electoral systems. The dots represent a landscape of actors who live, eat, give-birth and die in a mini 2d drama.</p>
+    </div>
+    <div class="flex flex-col justify-start h-[50vh] pt-4 pb-20">
+      <p class="mt-4">The "real average" is a representation of what the "color" of an ideal democratic government of these dots should look like: a reflection of the average color of every living dot. The row of boxes below reflect various electoral systems. All of them reflect the dots to some degree, and <a href="https://en.wikipedia.org/wiki/Proportional_representation">proportional representation</a> is the "best" of the vote-based systems, but sortition matches the real average most closely in almost every case. There are many facinating properties of this simulation, <a href="mailto:jorim.theuns@gmail.com?subject=Interested in the sortition simulation&body=Hi Jorim, I was browsing your portfolio and was interested in the sorition simulation, could you tell me more about it?">I'd be happy to tell you all about them!</a></p>
+    </div>
+  </Part>
+
+  <Part variant="thick">
+    <div class="flex flex-col justify-center h-dvh pt-16 pb-20">
+      <h1>Simulating ecologies</h1>
+      <iframe src="/sketches/balls.html" class="w-full flex-1 border-none mt-2" loading="lazy" title="Sortition simulation"></iframe>
+      <a href="/sketches/balls.html">Click here for larger version!</a>
+    </div>
+  </Part>
+
+  <!-- Part 3: Interviews -->
+  <Part variant="section-start" id="part3">
+    <div class="flex flex-col justify-end h-[50vh] pt-16 pb-4">
+      <h1 class="title">Interviews</h1>
+      <h3>Discussing sortition with political incumbents</h3>
+    </div>
+    <div class="flex flex-col justify-start h-[50vh] pt-4 pb-20">
+      <p>To compliment my mini design projects and my literature research, I organised informal sessions with people who worked "inside the system." These discussions were incredibly revealing, but I can't disclose the peoples identities as may become obvious from the following excerpts.</p>
+    </div>
+  </Part>
+
+  <Part>
+    <div class="flex flex-col justify-end h-[50vh] pt-16 pb-4">
+      <h4 class="quote italic">"I thought about what you mentioned: random people in power and first I thought, that's crazy, these people would have no idea what they are doing! But then I slept on it and realised: most of the people on the city council are incompetent AND stubborn... at least random people wouldn't be scared to compromise."</h4>
+    </div>
+    <div class="flex flex-col justify-start h-[50vh] pt-4 pb-20">
+      <h1>"...at least random people wouldn't be scared to compromise."</h1>
+      <p class="mt-2 opacity-70">- Member of the Eindhoven City Council</p>
+    </div>
+  </Part>
+
+  <Part>
+    <div class="flex flex-col justify-end h-[50vh] pt-16 pb-4">
+      <h1>"...it just matters that you can debate on the facts..."</h1>
+    </div>
+    <div class="flex flex-col justify-start h-[50vh] pt-4 pb-20">
+      <h4 class="quote italic">"Politics is crazy these days, if you compromise on the party line, there's no way you'll be asked to take a leadership role, so people don't debate good faith anymore, you know, they only care about optics and ambition, especially on the national level [...] with randomness it doesn't matter if theres more women one year, or more men, or any of that rubbish: it just matters that you can debate on the facts and compromise without betraying 'your team,' I like that..."</h4>
+      <p class="mt-2 opacity-70">- VVD youth party board member</p>
+    </div>
+  </Part>
+
+  <!-- Part 4: Field work -->
+  <Part variant="section-start" id="part4">
+    <div class="flex flex-col justify-end h-[50vh] pt-16 pb-4">
+      <h1 class="title">Field work</h1>
+    </div>
+    <div class="flex flex-col justify-start h-[50vh] pt-4 pb-20">
+      <h3>Sortition was promising, but most people would rather have the tyrant they know, over the randomly selected strangers they don't. The guiding question became: <span class="highlight">How can we learn to trust randomness?</span></h3>
+    </div>
+  </Part>
+
+  <Part>
+    <div class="flex flex-col justify-end h-[50vh] pt-16 pb-4">
+      <h1>Monkey wrench in the machine.</h1>
+      <h3>A podcast episode on random decision making.</h3>
+    </div>
+    <div class="flex flex-col justify-start h-[50vh] pt-4 pb-20">
+      <p>As a part of my investigation on trusting randomness, I recorded myself for a whole day as I made made decisions using coinflips and dice rolls. It was an intruiging process, and I discovered that coin flips and dice rolls aren't the best way to reduce descision fatigue, as you have to come up with the options beforehand. After a full day of seemingly random decsisions, I was exhausted.</p>
+      <br />
+      <h3>Interested? Listen to the podcast here:</h3>
+      <audio class="mt-4" controls>
+        <source src="/video/Podcast_randomness.m4a" type="audio/mp4" />
+        Your browser does not support the audio element.
+      </audio>
+    </div>
+  </Part>
+
+  <Part>
+    <div class="flex flex-col justify-center h-dvh pt-16 pb-20">
+      <h3>Visualising the multiverse</h3>
+      <Image src={randomWalk} alt="Random Walk poster" class="max-w-full my-2" />
+      <p class="mt-4">One thing that struck me during the recording was how arbitrary my actions became. Anything could have happened, and I was highly concious of this. This poster is my attempt to visualise everything that <span class="highlight">didn't</span> happen.</p>
+    </div>
+  </Part>
+
+  <!-- Part 5: Apophenia -->
+  <Part variant="section-start" id="part5">
+    <div class="flex flex-col justify-end h-[50vh] pt-16 pb-4">
+      <h1 class="title"><a href="https://en.wikipedia.org/wiki/Apophenia">Apophenia</a></h1>
+    </div>
+    <div class="flex flex-col justify-start h-[50vh] pt-4 pb-20">
+      <h2>"Apophenia is the tendency to perceive meaningful connections between unrelated things."</h2>
+      <p class="mt-2 opacity-70">- Wikipedia</p>
+    </div>
+  </Part>
+
+  <Part>
+    <div class="flex flex-col justify-end h-[50vh] pt-16 pb-4">
+      <h1>The problem of Apophenia</h1>
+    </div>
+    <div class="flex flex-col justify-start h-[50vh] pt-4 pb-20">
+      <p>Apophenia can be a major hinderance to trusting randomness. It is the human tendency to see pattern in noise. It has been observed in many fields and millions of people fall for it.</p>
+      <br />
+      <a href="https://en.wikipedia.org/wiki/Gambler%27s_fallacy">~ Recognising patterns in lottery numbers</a>
+      <a href="https://en.wikipedia.org/wiki/Self-selection_bias">~ Feeling connected to horoscopes</a>
+      <a href="https://www.patheos.com/blogs/heavenlycreatures/2011/11/image-of-jesus-on-dogs-butt-gods-second-appearance/">~ Seeing religious imagery on a dog's backside</a>
+    </div>
+  </Part>
+
+  <Part>
+    <div class="flex flex-col justify-end h-[50vh] pt-16 pb-4">
+      <h2>Exploring apophenia.</h2>
+      <Image src={theFool} alt="The Fool tarot card" class="max-w-full mt-2" />
+    </div>
+    <div class="flex flex-col justify-start h-[50vh] pt-4 pb-20">
+      <p>To explore the problems of apophenia, I taught myself how to give tarot readings. I was intruiged at how people would asign meaning to the order of the cards, even though they were, in the strictest sense, completly random.</p>
+      <br />
+      <p>The problem of apophenia was never truly resolved - even if I stressed the randomness of the order, people would be struck by the profoundity of some readings, or become highly defensive during a negative reading.</p>
+      <br />
+      <p>I continued to use Tarot for a few months, exploring what conditions enhanced or reduced the apophenic effect.</p>
+    </div>
+  </Part>
+
+  <!-- Part 6: Random media -->
+  <Part variant="section-start" id="part6">
+    <div class="flex flex-col justify-end h-[50vh] pt-16 pb-4">
+      <h1 class="title">Random media</h1>
+    </div>
+    <div class="flex flex-col justify-start h-[50vh] pt-4 pb-20">
+      <p>To further explore the effects of apophenia and of randomisation on the consumption of information, I persued two experiments, Onze zetels and random radio. The second a "low-fi" prototype of the first.</p>
+    </div>
+  </Part>
+
+  <Part>
+    <div class="flex flex-col justify-center h-dvh pt-16 pb-20">
+      <Image src={monolithChair} alt="Monolith chair by Zan Kobal" class="max-h-[calc(100vh-144px)] w-auto max-w-[calc(100vw-32px)]" />
+      <p>Monolith chair, by <a href="https://zankobal.com/">Zan Kobal</a></p>
+    </div>
+  </Part>
+
+  <Part>
+    <div class="flex flex-col justify-end h-[50vh] pt-16 pb-4">
+      <h1>Onze Zetels</h1>
+      <h3>(Our seats): Experiments in democratic empowerment through design.</h3>
+    </div>
+    <div class="flex flex-col justify-start h-[50vh] pt-4 pb-20">
+      <p>Onze zetels was the first iteration of a holistic "coming together" of the sortition project. The idea was to randomly select 5 designers and have them design 5 different chairs or thrones that would have the ability to record and playback audio recordings of creator/audience responses to the question: "If you were in power, what would you do?"</p>
+    </div>
+  </Part>
+
+  <Part>
+    <div class="flex flex-col justify-end h-[50vh] pt-16 pb-4">
+      <a href="https://sortition-radio.herokuapp.com/">
+        <h1>Random Radio</h1>
+      </a>
+      <p>The first low-fi prototype was designed to probe how people might use such a random database of recordings. It took the form of a website called Random Radio, and while it worked as intended, I didn't explore the idea further.</p>
+    </div>
+    <div class="flex flex-col justify-start h-[50vh] pt-4 pb-20">
+      <Image src={randomRadioScreenshot} alt="Random Radio screenshot" class="max-w-full" />
+    </div>
+  </Part>
+
+  <Part>
+    <div class="flex flex-col justify-end h-[50vh] pt-16 pb-4">
+      <h1>Critisism, feedback</h1>
+    </div>
+    <div class="flex flex-col justify-start h-[50vh] pt-4 pb-20">
+      <p>The mini-project was hailed with enthusiasm by friends and family, but heavilly critisized by the head of the Information Design department. He asked: "Where is the design? Everything is random, you're using design as a gimmick."</p>
+      <br />
+      <p>I confess to feeling a little missunderstood, but I understood the critique: the project was fun, but didn't communicate the essense of the research. I went back to the drawing board.</p>
+    </div>
+  </Part>
+
+  <!-- Part 7: CHAOS -->
+  <Part variant="section-start" id="part7">
+    <div class="flex flex-col justify-end h-[50vh] pt-16 pb-4">
+      <h1 class="title">CHAOS</h1>
+      <h3>Is randomness chaotic?</h3>
+    </div>
+    <div class="flex flex-col justify-start h-[50vh] pt-4 pb-20">
+      <p>People around me kept making allusions to chaos, a lack of structure. Randomness couldn't be a useful tool because it was chaotic. I picked up <a href="https://en.wikipedia.org/wiki/Chaos:_Making_a_New_Science">a book titled CHAOS</a>, and started reading. I soon realised that randomness was NOT chaotic.</p>
+    </div>
+  </Part>
+
+  <Part>
+    <div class="flex flex-col justify-center h-dvh pt-16 pb-20">
+      <Image src={lorenzAttractor} alt="Lorenz Attractor" class="max-h-[calc(100vh-144px)] w-auto max-w-[calc(100vw-32px)]" />
+    </div>
+  </Part>
+
+  <Part>
+    <div class="flex flex-col justify-end h-[50vh] pt-16 pb-4">
+      <h1>Barnesly Fern</h1>
+      <h3>Algorithmic investigations</h3>
+    </div>
+    <div class="flex flex-col justify-start h-[50vh] pt-4 pb-20">
+      <p>One of the concepts explored in the book was the barnsely fern, where a short set of transformation rules, iterated over at random, produced a fractal pattern. I iterated over the rule set in other, non random ways, and never got the same result. I reaslised that randomness has some special characterisitic that allowed the fractal structure to emerge.</p>
+    </div>
+  </Part>
+
+  <Part>
+    <div class="flex flex-col justify-end h-[50vh] pt-16 pb-4">
+      <h3>Random Iteration</h3>
+      <Image src={barneslyRandom} alt="Barnsley fern - random iteration" class="max-w-full mt-2" />
+    </div>
+    <div class="flex flex-col justify-start h-[50vh] pt-4 pb-20">
+      <h3>Time iteration</h3>
+      <Image src={barneslyTime} alt="Barnsley fern - time iteration" class="max-w-full mt-2" />
+    </div>
+  </Part>
+
+  <Part>
+    <div class="flex flex-col justify-end h-[50vh] pt-16 pb-4">
+      <h3>Noise iteration</h3>
+      <Image src={barneslyNoise} alt="Barnsley fern - noise iteration" class="max-w-full mt-2" />
+    </div>
+    <div class="flex flex-col justify-start h-[50vh] pt-4 pb-20">
+      <h3>Chaos iteration</h3>
+      <Image src={barneslyChaos} alt="Barnsley fern - chaos iteration" class="max-w-full mt-2" />
+    </div>
+  </Part>
+
+  <!-- Part 8: Experimentation -->
+  <Part variant="section-start">
+    <div class="flex flex-col justify-end h-[50vh] pt-16 pb-4">
+      <h1 class="title">Experimentation</h1>
+    </div>
+    <div class="flex flex-col justify-start h-[50vh] pt-4 pb-20">
+      <h3>Fractal fonts</h3>
+    </div>
+  </Part>
+
+  <Part variant="thick">
+    <div class="flex flex-col justify-center h-dvh pt-16 pb-20">
+      <h1>Barnesly font</h1>
+      <iframe src="/sketches/barnsley.html" class="w-full flex-1 border-none mt-2" loading="lazy" title="Barnsley fractal font"></iframe>
+      <p class="mt-4">Excited by the possibilities of creating fractals with random selection, I created the first 27 characters of what is to my knowledge, the worlds first truly fractal font. They cannot exist in an ordinary font file as they must be generated dynamically. They are neither bitmaps, nor vectors. They are sets of vector transformations that can generate fractal letterforms at quasi-infinite resolution.</p>
+    </div>
+  </Part>
+
+  <!-- Part 9: Randomisation -->
+  <Part variant="section-start">
+    <div class="flex flex-col justify-end h-[50vh] pt-16 pb-4">
+      <h1 class="title">Randomisation</h1>
+    </div>
+    <div class="flex flex-col justify-start h-[50vh] pt-4 pb-20">
+      <h3>Randomised control trials and the Monte Carlo method</h3>
+    </div>
+  </Part>
+
+  <Part variant="thick">
+    <div class="flex flex-col justify-center h-dvh pt-16 pb-20">
+      <h1>Reccurence plots</h1>
+      <h3>The (un)structure of randomness</h3>
+      <p class="mb-4">I was intruiged, what was the characteristic that made randomness essential in probing the deep structure of these relationships?</p>
+      <iframe src="/sketches/recurrence.html" class="w-full flex-1 border-none" loading="lazy" title="Recurrence plots"></iframe>
+      <p class="mt-4">Chaos scientists in the 1980's developed a technique called reccurence plotting, that allowed them to find higher order structure in chaotic systems. I recreated these reccurence plots for a number of systems, including a simple random number generator, and what struck me was this: with randomness, you can see the boundary of the canvas! Large numbers of random inputs allow you to be sure that the structure of the output is reflecting the structure of the higher order system (the plot), rather than some prior bias (the function).</p>
+    </div>
+  </Part>
+
+  <Part>
+    <div class="flex flex-col justify-end h-[50vh] pt-16 pb-4">
+      <h1 class="title">Eureka v2</h1>
+      <h3>Randomisation in Science</h3>
+    </div>
+    <div class="flex flex-col justify-start h-[50vh] pt-4 pb-20">
+      <p>Going back to the drawing board (killing my darlings) allowed me to make a second serendipitous connection: Scientists and engineers use randomisation all the time! Exactly for the reason that large numbers of randomly selected inputs act as a kind of blank canvas, an egalitarian sampling method that breaks information feedback loops that cause bias and allows for the exploration of <a href="https://en.wikipedia.org/wiki/Complex_system">complex systems.</a></p>
+    </div>
+  </Part>
+
+  <Part>
+    <div class="flex flex-col justify-end h-[50vh] pt-16 pb-4">
+      <h1 class="quote italic">"Iterating over the inputs of a phase space at random allows you to map the deep, higher order structure of a complex system."</h1>
+    </div>
+    <div class="flex flex-col justify-start h-[50vh] pt-4 pb-20">
+      <h3 class="mb-4">From my thesis: Strange Democracy</h3>
+      <Image src={strangeDemocracyCover} alt="Strange Democracy cover" class="max-w-full" />
+    </div>
+  </Part>
+
+  <!-- Part 10: More Interviews -->
+  <Part variant="section-start" id="part10">
+    <div class="flex flex-col justify-end h-[50vh] pt-16 pb-4">
+      <h1 class="title">More Interviews</h1>
+    </div>
+    <div class="flex flex-col justify-start h-[50vh] pt-4 pb-20">
+      <h3>Experts in political theory, sortition and complexity.</h3>
+    </div>
+  </Part>
+
+  <Part>
+    <div class="flex flex-col justify-end h-[50vh] pt-16 pb-4">
+      <h1>Having diverged to the point of serendipity, I started to converge around a design question: what should I do with all this information?</h1>
+    </div>
+    <div class="flex flex-col justify-start h-[50vh] pt-4 pb-20">
+      <p>I realised that the nature of my reasearch had been highly connective: bringing together insights from very disperate fields. I thought that I could create something that mirrored that connectivity, by creating a mini-documentary about randomness, science and the future of democracy, containing interviews with experts from each field. I sent out emails and got a great number of reponses.</p>
+    </div>
+  </Part>
+
+  <Part>
+    <div class="flex flex-col justify-end h-[50vh] pt-16 pb-4">
+      <h1>Expanding the bandwidth of democracy.</h1>
+    </div>
+    <div class="flex flex-col justify-start h-[50vh] pt-4 pb-20">
+      <video controls playsinline preload="auto" class="max-h-[calc(100vh-144px)] w-auto max-w-[calc(100vw-32px)]">
+        <source src="/video/expand-the-bandwidth.mp4" type="video/mp4" />
+      </video>
+      <h3 class="mt-4">Exerpt from interview with Hubertus Hofkirchner and John Burnheim</h3>
+    </div>
+  </Part>
+
+  <!-- Portfolio to be continued -->
+  <Part variant="section-start" id="continued">
+    <div class="flex flex-col justify-end h-[50vh] pt-16 pb-4">
+      <h1 class="title">Portfolio to be continued...</h1>
+    </div>
+    <div class="flex flex-col justify-start h-[50vh] pt-4 pb-20">
+      <h3>Please come back later for more updates on the Dembrane story.</h3>
+    </div>
+  </Part>
+
+  <!-- Interactive balls-mouse sketch -->
+  <Part variant="thick">
+    <div class="flex flex-col justify-center h-dvh pt-16 pb-20">
+      <iframe src="/sketches/balls-mouse.html" class="w-full flex-1 border-none" loading="lazy" title="Interactive balls simulation"></iframe>
+    </div>
+  </Part>
+</Section>
