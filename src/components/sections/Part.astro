@@ -1,0 +1,39 @@
+---
+interface Props {
+  class?: string;
+  variant?: "peek" | "thick" | "thicker" | "thickest" | "section-start";
+  id?: string;
+}
+
+const { class: className = "", variant, id } = Astro.props;
+
+const variantClasses: Record<string, string> = {
+  peek: "max-w-[calc(100vw-214px)] min-w-[300px] max-md:max-w-[calc(100vw-166px)]",
+  thick: "min-w-[50vw]",
+  thicker: "min-w-[75vw]",
+  thickest: "min-w-[100vw]",
+  "section-start": "ml-[calc(100vw-628px)] pl-16 pr-16 border-l border-solid max-md:ml-16 max-md:pl-4 max-md:pr-4",
+};
+---
+
+<div
+  class:list={[
+    "part flex flex-col justify-around w-max min-h-0 h-full overflow-hidden",
+    variant && variantClasses[variant],
+    className,
+  ]}
+  style={`border-color: var(--border)`}
+  id={id}
+>
+  <slot />
+</div>
+
+<style>
+  .part {
+    opacity: 0;
+    transition: all ease 0.4s;
+  }
+  .part:global(.active) {
+    opacity: 1;
+  }
+</style>

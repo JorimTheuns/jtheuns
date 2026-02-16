@@ -1,0 +1,81 @@
+---
+interface Props {
+  theme: {
+    bg: string;
+    text: string;
+    link: string;
+    highlight?: string;
+    border?: string;
+  };
+  title: string;
+}
+
+const { theme, title } = Astro.props;
+---
+
+<section
+  class="section relative h-dvh"
+  style={`
+    --bg: ${theme.bg};
+    --text: ${theme.text};
+    --link: ${theme.link};
+    --highlight: ${theme.highlight || theme.text};
+    --border: ${theme.border || theme.text};
+    background: var(--bg);
+    color: var(--text);
+  `}
+>
+  <div class="section-title absolute top-0 z-10 w-screen">
+    <h1 class="text-[2rem] leading-[2rem] p-4 pl-16 max-md:pl-4 inline-block relative">
+      {title}
+    </h1>
+  </div>
+  <div class="section-carousel overflow-x-scroll overflow-y-hidden h-full hide-scrollbar overscroll-x-contain">
+    <div class="section-content grid grid-flow-col grid-rows-[1fr] gap-[clamp(2rem,2rem+2vw,4rem)] min-w-max h-full pl-16 pr-4 max-md:pl-4">
+      <slot />
+    </div>
+  </div>
+
+  <!-- Horizontal center line animation -->
+  <div class="center-line absolute top-1/2 w-full h-0 border-b-2 origin-left scale-x-0 transition-transform duration-[2s] ease-out" style={`border-color: var(--border)`}></div>
+</section>
+
+<style>
+  .section :global(a),
+  .section :global(a *) {
+    color: var(--link);
+  }
+  .section :global(a::after) {
+    background: var(--link);
+  }
+  .section :global(.highlight) {
+    color: var(--highlight);
+  }
+
+  @media (min-width: 596px) {
+    .section {
+      opacity: 0.1;
+      transition: all ease 0.4s;
+    }
+    .section .section-carousel {
+      transform: translateX(250px);
+      transition: transform ease 0.4s;
+    }
+    .section .section-title {
+      transform: translateX(-50px);
+      transition: transform ease 0.4s;
+    }
+    .section:global(.active) {
+      opacity: 1;
+    }
+    .section:global(.active) .section-carousel {
+      transform: translateX(0);
+    }
+    .section:global(.active) .section-title {
+      transform: translateX(0);
+    }
+    .section:global(.active) .center-line {
+      transform: scale(1, 1);
+    }
+  }
+</style>
