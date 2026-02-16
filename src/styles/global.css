@@ -24,3 +24,55 @@
 @theme {
   --font-serif: "Aesthet Nova", serif;
 }
+
+/* Fluid typography using clamp */
+html {
+  font-size: clamp(0.875rem, 0.75rem + 0.5vh, 1.125rem);
+  -webkit-text-size-adjust: 100%;
+  font-weight: normal;
+}
+
+h1 { font-size: clamp(1.5rem, 1rem + 2vh, 2.5rem); }
+h2 { font-size: clamp(1.2rem, 0.9rem + 1.2vh, 1.8rem); }
+h3 { font-size: clamp(1rem, 0.8rem + 0.8vh, 1.4rem); }
+h4 { font-size: clamp(0.875rem, 0.75rem + 0.5vh, 1.125rem); }
+
+.title { font-size: clamp(2.5rem, 2rem + 3vh, 4rem); }
+
+h1, h2, h3, h4, h5, h6, p { max-width: 500px; }
+
+/* Scrollbar hiding */
+.hide-scrollbar::-webkit-scrollbar { display: none; }
+.hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
+/* Link animated underline */
+a {
+  text-decoration: none;
+  display: inline-block;
+  position: relative;
+}
+
+a::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 18%;
+  left: 0;
+  background: currentColor;
+  transform: scale(0, 1);
+  transform-origin: left;
+  transition: transform ease 0.4s;
+}
+
+a:hover::after,
+a:focus::after {
+  transform: scale(1, 1);
+}
+
+/* Global reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}

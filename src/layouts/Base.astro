@@ -1,0 +1,28 @@
+---
+import "../styles/global.css";
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const {
+  title = "Jorim Theuns — Research-driven designer",
+  description = "Portfolio of Jorim Theuns, a research-driven designer obsessed with information: data that makes a difference."
+} = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content={description} />
+    <title>{title}</title>
+  </head>
+  <body class="font-serif bg-black text-[#F0D3D5] overflow-hidden">
+    <div id="scroll-parent" class="h-dvh overflow-x-hidden overflow-y-scroll scroll-smooth">
+      <slot />
+    </div>
+  </body>
+</html>
