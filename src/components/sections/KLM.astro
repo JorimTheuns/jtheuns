@@ -1,0 +1,37 @@
+---
+import Section from "./Section.astro";
+import Part from "./Part.astro";
+
+const theme = {
+  bg: "#00A1E4",
+  text: "#fff",
+  link: "#4B4290",
+  highlight: "#DDD9E9",
+  border: "#fff",
+};
+---
+
+<Section title="KLM" theme={theme}>
+  <Part variant="peek">
+    <div class="flex flex-col justify-end h-[50vh] pt-16 pb-4">
+      <h1>Video for KLM's process automation hub</h1>
+    </div>
+    <div class="flex flex-col justify-start h-[50vh] pt-4 pb-20">
+      <p>While working for UiPath, I was asked to create a trailer showcasing the work done by KLM's process automation hub. With no team and no budget; filming, audio, color grading, animation and editing were all up to me.</p>
+      <p class="mt-4">Looking back, there's a lot I learned from the experience and would do differently, but I'm proud of what I delivered, given the constraints.</p>
+    </div>
+  </Part>
+
+  <Part variant="thick">
+    <div class="flex flex-col justify-center h-dvh pt-16 pb-20">
+      <iframe
+        src="https://www.youtube.com/embed/UTMAX5EIsog"
+        class="w-full flex-1 border-none"
+        loading="lazy"
+        title="KLM process automation hub video"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen
+      ></iframe>
+    </div>
+  </Part>
+</Section>

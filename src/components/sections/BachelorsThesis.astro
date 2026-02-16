@@ -1,0 +1,35 @@
+---
+import Section from "./Section.astro";
+import Part from "./Part.astro";
+
+const theme = {
+  bg: "#5F708E",
+  text: "#fff",
+  link: "#E2979F",
+  highlight: "#EAFEF6",
+};
+---
+
+<Section title="Bachelor's Thesis" theme={theme}>
+  <Part variant="peek">
+    <div class="flex flex-col justify-end h-[50vh] pt-16 pb-4">
+      <h1>Exploring movement data visualisation in virtual reality</h1>
+    </div>
+    <div class="flex flex-col justify-start h-[50vh] pt-4 pb-20">
+      <p>During my <a href="http://essay.utwente.nl/73338/1/Theuns_BA_EEMCS.pdf">bachelor's thesis</a>, I collaborated with researchers at the <a href="https://www.itc.nl/">ITC faculty</a> in Enschede to develop several functioning virtual reality movement data visualisation prototypes, and developed a holistic, user centered framework for continued virtual reality data visualization (VRDV) research at the ITC. The project broadly followed a design science approach; with literature and state-of-the-art reviews being performed in parallel with iterative prototyping, user testing and requirement analysis. <span class="highlight">For this thesis I recieved a 10/10.</span></p>
+    </div>
+  </Part>
+
+  <Part variant="thick">
+    <div class="flex flex-col justify-center h-dvh pt-16 pb-20">
+      <iframe
+        src="https://www.youtube.com/embed/7trNNDUYN-M"
+        class="w-full flex-1 border-none"
+        loading="lazy"
+        title="Bachelor's thesis VR movement data visualisation"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen
+      ></iframe>
+    </div>
+  </Part>
+</Section>

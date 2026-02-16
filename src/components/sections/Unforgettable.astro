@@ -1,0 +1,44 @@
+---
+import { Image } from "astro:assets";
+import Section from "./Section.astro";
+import Part from "./Part.astro";
+
+import draftExplod from "../../assets/unforgettable/draft-explod.jpg";
+
+const theme = {
+  bg: "#041521",
+  text: "#fff",
+  link: "#E3B68C",
+  highlight: "#AEDFF2",
+};
+---
+
+<Section title="Unforgettable" theme={theme}>
+  <Part variant="peek">
+    <div class="flex flex-col justify-end h-[50vh] pt-16 pb-4">
+      <h1>Prizewinning Hackathon project</h1>
+    </div>
+    <div class="flex flex-col justify-start h-[50vh] pt-4 pb-20">
+      <h3>Unforgettable was a project I worked on with my team: <span class="highlight">ExpLOD</span> during <a href="https://hackalod.com/">HackaLOD 2019.</a></h3>
+    </div>
+  </Part>
+
+  <Part>
+    <div class="flex flex-col justify-end h-[50vh] pt-16 pb-4">
+      <img src="https://hackalod.com/wp-content/uploads/2019/12/20191130a331136.jpg" alt="HackaLOD 2019 team photo" class="max-w-full max-h-[40vh] object-contain" loading="lazy" />
+    </div>
+    <div class="flex flex-col justify-start h-[50vh] pt-4 pb-20">
+      <img src="https://hackalod.com/wp-content/uploads/2019/12/20191130a310130.jpg" alt="HackaLOD 2019 presentation" class="max-w-full max-h-[35vh] object-contain" loading="lazy" />
+      <p class="mt-2 opacity-70">Photos: Jacqueline van der Kort | KB</p>
+    </div>
+  </Part>
+
+  <Part variant="thick">
+    <div class="flex flex-col justify-center h-dvh pt-16 pb-20">
+      <h1>Outcome</h1>
+      <video controls playsinline preload="auto" poster={draftExplod.src} class="max-h-[calc(100vh-144px)] w-auto max-w-[calc(100vw-32px)] mt-4">
+        <source src="/video/EXPLOD.mp4" type="video/mp4" />
+      </video>
+    </div>
+  </Part>
+</Section>

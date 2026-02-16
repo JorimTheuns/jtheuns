@@ -1,0 +1,35 @@
+---
+import Section from "./Section.astro";
+import Part from "./Part.astro";
+
+const theme = {
+  bg: "#2E2382",
+  text: "#fff",
+  link: "#4B4290",
+  highlight: "#DDD9E9",
+  border: "#fff",
+};
+---
+
+<Section title="Matteo" theme={theme}>
+  <Part variant="peek">
+    <div class="flex flex-col justify-end h-[50vh] pt-16 pb-4">
+      <h1>Portfolio website for an industrial designer</h1>
+    </div>
+    <div class="flex flex-col justify-start h-[50vh] pt-4 pb-20">
+      <p>Matteo and Lena approached me to craft a unique website to showcase Matteo's projects in Lena's distinctive style.</p>
+    </div>
+  </Part>
+
+  <Part variant="thick">
+    <div class="flex flex-col justify-center h-dvh pt-16 pb-20">
+      <iframe
+        src="https://ecemnib.github.io/Matteo/index.html"
+        class="w-full flex-1 border-none"
+        style="background:#fff"
+        loading="lazy"
+        title="Matteo's portfolio website"
+      ></iframe>
+    </div>
+  </Part>
+</Section>

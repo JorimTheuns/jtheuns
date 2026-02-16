@@ -1,0 +1,56 @@
+---
+import { Image } from "astro:assets";
+import Section from "./Section.astro";
+import Part from "./Part.astro";
+
+import gitzettelLarge from "../../assets/zettelkasten/gitzettel-large.png";
+import noteplanTypeora from "../../assets/zettelkasten/Noteplan-Typeora.png";
+
+const theme = {
+  bg: "#0D0D0D",
+  text: "#AFAFAF",
+  link: "#3E3C73",
+  highlight: "#A6A6A6",
+};
+---
+
+<Section title="Hobby: Zettelkasten" theme={theme}>
+  <Part variant="peek">
+    <div class="flex flex-col justify-end h-[50vh] pt-16 pb-4">
+      <h1>Personal Knowledge Management Network</h1>
+    </div>
+    <div class="flex flex-col justify-start h-[50vh] pt-4 pb-20">
+      <p>As an avid note taker, I was always frustrated that after taking a note, it ususally ended up gathering dust in a folder somewhere. My collection of notes was exactly that, a collection, with a strict, folder-based heirachy. Putting the theory I had learned during Dembrane and Unforgettable into practise lead me to cultivate a knowledge management system based on the principles of antifragility and rhyzomatics, with techniques from the world of linked open data.</p>
+    </div>
+  </Part>
+
+  <Part variant="thick">
+    <div class="flex flex-col justify-center h-dvh pt-16 pb-20">
+      <Image src={gitzettelLarge} alt="GitZettel knowledge graph" class="max-h-[calc(100vh-144px)] w-auto max-w-[calc(100vw-32px)]" />
+    </div>
+  </Part>
+
+  <Part>
+    <div class="flex flex-col justify-end h-[50vh] pt-16 pb-4">
+      <h3>Notes, calendar, reminders and contacts. All from one database.</h3>
+    </div>
+    <div class="flex flex-col justify-start h-[50vh] pt-4 pb-20">
+      <p>Indead of siloing all my information based on the process it was involved with, I started storing all my data in one interoperable file format called Markdown. Notes could now refer to oneanother, calendar items could link to reminders or contacts and vice versa. This is based on the file management principle called "Pillars, pipelines, vaults." All my pipelines could now draw from the same data vault.</p>
+    </div>
+  </Part>
+
+  <Part variant="thick">
+    <div class="flex flex-col justify-center h-dvh pt-16 pb-20">
+      <Image src={noteplanTypeora} alt="Noteplan and Typora side by side" class="max-h-[calc(100vh-144px)] w-auto max-w-[calc(100vw-32px)]" />
+    </div>
+  </Part>
+
+  <Part>
+    <div class="flex flex-col justify-end h-[50vh] pt-16 pb-4">
+      <h3>Technologies</h3>
+    </div>
+    <div class="flex flex-col justify-start h-[50vh] pt-4 pb-20">
+      <p>This system is made possible through a cloudkit architecture, and is backed-up by automated commits to a private github repository using Cron-Jobs. Any app that can read markdown can now interface with the data vault. I currently use Obsidian to map the vault, Typeora to write long form, and Noteplan 3 to access the notes on my phone, push notifications, and to interface with reminders and calendars.</p>
+    </div>
+  </Part>
+</Section>

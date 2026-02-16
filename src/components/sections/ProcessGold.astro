@@ -1,0 +1,35 @@
+---
+import Section from "./Section.astro";
+import Part from "./Part.astro";
+
+const theme = {
+  bg: "#fff",
+  text: "#1F73C1",
+  link: "#E7AC4D",
+  highlight: "#4986CE",
+};
+---
+
+<Section title="Process Gold XR" theme={theme}>
+  <Part variant="peek">
+    <div class="flex flex-col justify-end h-[50vh] pt-16 pb-4">
+      <h1>Experimental VR data-dashboard</h1>
+    </div>
+    <div class="flex flex-col justify-start h-[50vh] pt-4 pb-20">
+      <h3>In the summer of 2018, I was hired by <span class="highlight">ProcessGold B.V.,</span> now <a href="https://www.uipath.com/product/process-mining">UiPath Process Mining</a>, to implement a VR version of their process graph.</h3>
+    </div>
+  </Part>
+
+  <Part variant="thick">
+    <div class="flex flex-col justify-center h-dvh pt-16 pb-20">
+      <h1>Demo</h1>
+      <iframe
+        src="https://jorimtheuns.github.io/ProcessGoldXR/vis.html"
+        class="w-full flex-1 border-none mt-4"
+        loading="lazy"
+        title="Process Gold XR demo"
+      ></iframe>
+      <p class="mt-4">Feel free to explore the demo! On desktop, you can walk around using the WASD keys and you can query nodes by clicking while the cursor (black circle) is over them. If using a VR headset, enter the scene by using your controller to click on the VR goggles in the bottom right. The demo will also work on mobile, but you will not be able to navigate the scene.</p>
+    </div>
+  </Part>
+</Section>
