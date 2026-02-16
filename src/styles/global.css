@@ -70,11 +70,9 @@ a:focus::after {
   transform: scale(1, 1);
 }
 
-/* Global reset */
+/* Global reset — box-sizing only; Tailwind preflight handles margin/padding */
 * {
   box-sizing: border-box;
-  margin: 0;
-  padding: 0;
 }
 
 /* Scroll hint animations */

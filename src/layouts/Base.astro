@@ -21,7 +21,7 @@ const {
     <title>{title}</title>
   </head>
   <body class="font-serif bg-black text-[#F0D3D5] overflow-hidden">
-    <div id="scroll-parent" class="h-dvh overflow-x-hidden overflow-y-scroll scroll-smooth">
+    <div id="scroll-parent" class="h-dvh overflow-x-hidden overflow-y-scroll scroll-smooth" style="scroll-snap-type: y mandatory;">
       <slot />
     </div>
     <script src="../scripts/scroll-observer.ts"></script>

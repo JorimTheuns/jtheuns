@@ -23,6 +23,7 @@ const { theme, title } = Astro.props;
     --border: ${theme.border || theme.text};
     background: var(--bg);
     color: var(--text);
+    scroll-snap-align: start;
   `}
 >
   <div class="section-title absolute top-0 z-10 w-screen">
