@@ -8,7 +8,7 @@ interface Props {
 const { src, title = "Interactive p5.js sketch", class: className = "" } = Astro.props;
 ---
 
-<div class:list={["relative w-full", className]}>
+<div class:list={["relative w-full max-w-[calc(100vw-2rem)]", className]}>
   <iframe
     src={src}
     class="w-full h-full border-none overflow-hidden"

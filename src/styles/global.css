@@ -94,3 +94,28 @@ a:focus::after {
 
 .animate-scroll-hor { animation: scroll-hor 4s linear infinite; }
 .animate-scroll-vert { animation: scroll-vert 4s linear infinite; }
+
+/* Responsive media constraints */
+@media (max-width: 596px) {
+  video, iframe, img {
+    max-width: calc(100vw - 2rem) !important;
+  }
+
+  /* YouTube and video iframes should maintain aspect ratio on mobile */
+  iframe[src*="youtube"],
+  iframe[src*="youtu.be"] {
+    aspect-ratio: 16 / 9;
+    height: auto !important;
+    flex: none !important;
+  }
+
+  /* Audio elements should not overflow */
+  audio {
+    max-width: calc(100vw - 2rem);
+  }
+}
+
+/* Ensure images don't overflow their containers */
+.section img {
+  max-width: 100%;
+}

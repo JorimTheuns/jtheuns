@@ -8,9 +8,9 @@ interface Props {
 const { class: className = "", variant, id } = Astro.props;
 
 const variantClasses: Record<string, string> = {
-  peek: "max-w-[calc(100vw-214px)] min-w-[300px] max-md:max-w-[calc(100vw-166px)]",
-  thick: "min-w-[50vw]",
-  thicker: "min-w-[75vw]",
+  peek: "max-w-[calc(100vw-214px)] min-w-[300px] max-md:max-w-[calc(100vw-2rem)] max-md:min-w-[280px]",
+  thick: "min-w-[50vw] max-md:min-w-[calc(100vw-2rem)]",
+  thicker: "min-w-[75vw] max-md:min-w-[calc(100vw-2rem)]",
   thickest: "min-w-[100vw]",
   "section-start": "ml-[calc(100vw-628px)] pl-16 pr-16 border-l border-solid max-md:ml-16 max-md:pl-4 max-md:pr-4",
 };
@@ -29,11 +29,14 @@ const variantClasses: Record<string, string> = {
 </div>
 
 <style>
-  .part {
-    opacity: 0;
-    transition: all ease 0.4s;
-  }
-  .part:global(.active) {
-    opacity: 1;
+  /* On mobile, parts are always visible. On desktop, they fade in via IntersectionObserver */
+  @media (min-width: 596px) {
+    .part {
+      opacity: 0;
+      transition: all ease 0.4s;
+    }
+    .part:global(.active) {
+      opacity: 1;
+    }
   }
 </style>
