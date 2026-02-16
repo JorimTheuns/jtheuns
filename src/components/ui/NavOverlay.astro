@@ -1,0 +1,71 @@
+<nav id="nav-overlay" class="nav-overlay" aria-label="Portfolio navigation">
+  <div></div>
+  <button id="nav-up" class="nav-btn" aria-label="Previous section" title="Previous section">
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+      <polyline points="18 15 12 9 6 15" />
+    </svg>
+  </button>
+  <div></div>
+  <button id="nav-left" class="nav-btn" aria-label="Previous part" title="Previous part">
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+      <polyline points="15 18 9 12 15 6" />
+    </svg>
+  </button>
+  <div></div>
+  <button id="nav-right" class="nav-btn" aria-label="Next part" title="Next part">
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+      <polyline points="9 6 15 12 9 18" />
+    </svg>
+  </button>
+  <div></div>
+  <button id="nav-down" class="nav-btn" aria-label="Next section" title="Next section">
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+      <polyline points="6 9 12 15 18 9" />
+    </svg>
+  </button>
+  <div></div>
+</nav>
+
+<style>
+  .nav-overlay {
+    display: none;
+    position: fixed;
+    top: 12px;
+    left: 8px;
+    z-index: 50;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2px;
+    width: 48px;
+  }
+
+  @media (min-width: 596px) {
+    .nav-overlay {
+      display: grid;
+    }
+  }
+
+  .nav-btn {
+    width: 16px;
+    height: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    opacity: 0.6;
+    transition: opacity 0.2s;
+    background: none;
+    border: none;
+    color: inherit;
+    padding: 0;
+  }
+
+  .nav-btn:hover {
+    opacity: 1;
+  }
+
+  .nav-btn:global(.disabled) {
+    opacity: 0.15;
+    cursor: default;
+    pointer-events: none;
+  }
+</style>

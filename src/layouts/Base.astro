@@ -1,5 +1,6 @@
 ---
 import "../styles/global.css";
+import NavOverlay from "../components/ui/NavOverlay.astro";
 
 interface Props {
   title?: string;
@@ -21,6 +22,7 @@ const {
     <title>{title}</title>
   </head>
   <body class="font-serif bg-black text-[#F0D3D5] overflow-hidden">
+    <NavOverlay />
     <div id="scroll-parent" class="h-dvh overflow-x-hidden overflow-y-scroll scroll-smooth" style="scroll-snap-type: y mandatory;">
       <slot />
     </div>
