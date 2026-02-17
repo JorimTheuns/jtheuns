@@ -12,7 +12,9 @@
     "@astrojs/mdx": "^4.3.13",
     "@astrojs/vercel": "^9.0.4",
     "@tailwindcss/vite": "^4.1.18",
+    "@vercel/blob": "^2.2.0",
     "astro": "^5.17.1",
+    "dotenv": "^17.3.1",
     "tailwindcss": "^4.1.18"
   },
   "devDependencies": {
