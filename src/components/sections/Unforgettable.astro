@@ -4,6 +4,8 @@ import Section from "./Section.astro";
 import Part from "./Part.astro";
 
 import draftExplod from "../../assets/unforgettable/draft-explod.jpg";
+import hackalod1 from "../../assets/unforgettable/Hackalod1.jpg";
+import hackalod2 from "../../assets/unforgettable/Hackalod2.jpg";
 
 const theme = {
   bg: "#041521",
@@ -25,10 +27,10 @@ const theme = {
 
   <Part>
     <div class="flex flex-col justify-end h-[50vh] pt-16 pb-4">
-      <img src="https://hackalod.com/wp-content/uploads/2019/12/20191130a331136.jpg" alt="HackaLOD 2019 team photo" class="max-w-full max-h-[40vh] object-contain" loading="lazy" />
+      <Image src={hackalod1} alt="HackaLOD 2019 team photo" class="max-w-full max-h-[40vh] object-contain" />
     </div>
     <div class="flex flex-col justify-start h-[50vh] pt-4 pb-20">
-      <img src="https://hackalod.com/wp-content/uploads/2019/12/20191130a310130.jpg" alt="HackaLOD 2019 presentation" class="max-w-full max-h-[35vh] object-contain" loading="lazy" />
+      <Image src={hackalod2} alt="HackaLOD 2019 presentation" class="max-w-full max-h-[35vh] object-contain" />
       <p class="mt-2 opacity-70">Photos: Jacqueline van der Kort | KB</p>
     </div>
   </Part>
