@@ -5,6 +5,7 @@ const projects = defineCollection({
   loader: glob({ pattern: "**/*.mdx", base: "./src/content/projects" }),
   schema: z.object({
     title: z.string(),
+    year: z.number(),
     order: z.number(),
     theme: z.object({
       bg: z.string(),

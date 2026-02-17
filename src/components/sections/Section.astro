@@ -8,9 +8,10 @@ interface Props {
     border?: string;
   };
   title: string;
+  year?: number;
 }
 
-const { theme, title } = Astro.props;
+const { theme, title, year } = Astro.props;
 ---
 
 <section
@@ -30,6 +31,7 @@ const { theme, title } = Astro.props;
     <h1 class="text-[2rem] leading-[2rem] p-4 pl-16 max-md:pl-4 inline-block relative">
       {title}
     </h1>
+    {year && <span class="text-sm opacity-60 pl-16 max-md:pl-4 -mt-2 block">{year}</span>}
   </div>
   <div class="section-carousel overflow-x-scroll overflow-y-hidden h-full hide-scrollbar overscroll-x-contain" style="-webkit-overflow-scrolling: touch;">
     <div class="section-content grid grid-flow-col grid-rows-[1fr] gap-[clamp(2rem,2rem+2vw,4rem)] min-w-max h-full pl-16 pr-4 max-md:pl-4">
