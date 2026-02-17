@@ -27,3 +27,4 @@ public/video/*.m4a
 
 # jetbrains setting folder
 .idea/
+.vercel
