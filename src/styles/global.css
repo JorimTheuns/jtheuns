@@ -120,41 +120,41 @@ a:focus::after {
 
 /* === Part layout constraints (matching original portfolio) === */
 
-/* Content inside top/bottom halves must not exceed their half-viewport */
-.part .top > *,
-.part .bottom > * {
+/* Images and videos inside parts: don't grow, only shrink */
+.part img,
+.part video {
   flex: 0 1 auto;
-}
-
-.part .top img,
-.part .top video,
-.part .top iframe {
-  max-height: calc(50vh - 80px);
-  object-position: 0 100%;
-  object-fit: scale-down;
-  width: auto;
-}
-
-.part .bottom img,
-.part .bottom video,
-.part .bottom iframe {
-  max-height: calc(50vh - 96px);
-  object-position: 0 0;
-  object-fit: scale-down;
-  width: auto;
-}
-
-.part .full img,
-.part .full video,
-.part .full iframe {
-  max-height: calc(100vh - 144px);
-  object-fit: scale-down;
-  width: auto;
-  flex: 0 1 auto;
-}
-
-/* General image defaults */
-.part img {
   object-fit: scale-down;
   object-position: center left;
+  min-height: 0;
+  width: auto;
+  height: auto;
+}
+
+/* Audio: flex shrink but keep explicit dimensions */
+.part audio {
+  flex: 0 1 auto;
+  min-height: 0;
+}
+
+/* Constrain media in half-height containers */
+.part [class*="h-[50vh]"] img,
+.part [class*="h-[50vh]"] video,
+.part [class*="h-[50vh]"] iframe {
+  max-height: calc(50vh - 96px);
+}
+
+/* Constrain media in full-height containers */
+.part [class*="h-dvh"] img,
+.part [class*="h-dvh"] video,
+.part [class*="h-dvh"] iframe,
+.part [class*="h-[100vh]"] img,
+.part [class*="h-[100vh]"] video,
+.part [class*="h-[100vh]"] iframe {
+  max-height: calc(100vh - 144px);
+}
+
+/* Fallback: no image in a part should exceed viewport */
+.part img {
+  max-height: calc(100vh - 144px);
 }
