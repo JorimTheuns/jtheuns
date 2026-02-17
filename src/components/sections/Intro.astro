@@ -21,8 +21,7 @@ const theme = {
     <div class="flex flex-col justify-end h-[50vh] pt-16 pb-4">
       <h1 class="title">Hi there,</h1>
       <h3>I'm a research driven designer who's obsessed with information: data that <span class="highlight">makes a difference.</span></h3>
-      <br />
-      <div class="h-8 w-full relative overflow-hidden">
+      <div class="mt-4 h-8 w-full relative overflow-hidden">
         <p class="animate-scroll-hor text-xs leading-6 h-6">Scroll horizontally to navigate parts</p>
       </div>
     </div>
@@ -30,10 +29,8 @@ const theme = {
       <div class="h-8 w-full relative overflow-hidden">
         <p class="animate-scroll-vert text-xs leading-6 h-6">Scroll vertically to navigate sections</p>
       </div>
-      <br />
-      <p>Step one: always follow the data. Map the <a href="https://en.wikipedia.org/wiki/Systems_theory">system</a> and stay curious, don't get tempted <a href="https://en.wikipedia.org/wiki/Map%E2%80%93territory_relation">to fit the data to a model.</a> Step two: action. Communicate with clarity and <a href="https://president.yale.edu/president/speeches/compassion-and-cooperation-change">compassion</a>, using <a href="https://en.wikipedia.org/wiki/Antifragile">antifragility</a> to make systems that get stronger over time.</p>
-      <br />
-      <p>Tip: If you're using a mouse, you can scroll horizontally by holding shift while you scroll.</p>
+      <p class="mt-4">Step one: always follow the data. Map the <a href="https://en.wikipedia.org/wiki/Systems_theory">system</a> and stay curious, don't get tempted <a href="https://en.wikipedia.org/wiki/Map%E2%80%93territory_relation">to fit the data to a model.</a> Step two: action. Communicate with clarity and <a href="https://president.yale.edu/president/speeches/compassion-and-cooperation-change">compassion</a>, using <a href="https://en.wikipedia.org/wiki/Antifragile">antifragility</a> to make systems that get stronger over time.</p>
+      <p class="mt-4">Tip: If you're using a mouse, you can scroll horizontally by holding shift while you scroll.</p>
     </div>
   </Part>
 
@@ -47,17 +44,14 @@ const theme = {
   <!-- Part 3: About me -->
   <Part>
     <div class="flex flex-col justify-end h-[50vh] pt-16 pb-4">
-      <Image src={jorim} alt="Jorim Theuns" class="w-40 h-40 rounded-full object-cover" />
+      <Image src={jorim} alt="Jorim Theuns" class="max-w-full" />
     </div>
     <div class="flex flex-col justify-start h-[50vh] pt-4 pb-20">
       <h1>About me</h1>
       <p>Recent graduate, fired up and motivated to make an impact in forward thinking, people-focused organisations.</p>
-      <br />
-      <p>I've studied at a <a href="https://www.utwente.nl/en/education/bachelor/programmes/creative-technology/">techy uni</a> and an <a href="https://www.designacademy.nl/p/study-at-dae/masters/information-design">off the rails design school</a>. Worked in <a href="https://dailyhive.com/vancouver/bennys-cafe-closed-owner?auto=true">cafe's</a> and in <a href="https://www.uipath.com/">big-tech</a>. I'm a brainstorming sketchbook addict, trying to maximise model evidence.</p>
-      <br />
-      <p>Dutch citizen, born in London '96</p>
-      <br />
-      <a href="mailto:jorim.theuns@gmail.com">
+      <p class="mt-4">I've studied at a <a href="https://www.utwente.nl/en/education/bachelor/programmes/creative-technology/">techy uni</a> and an <a href="https://www.designacademy.nl/p/study-at-dae/masters/information-design">off the rails design school</a>. Worked in <a href="https://dailyhive.com/vancouver/bennys-cafe-closed-owner?auto=true">cafe's</a> and in <a href="https://www.uipath.com/">big-tech</a>. I'm a brainstorming sketchbook addict, trying to maximise model evidence.</p>
+      <p class="mt-4">Dutch citizen, born in London '96</p>
+      <a class="mt-4" href="mailto:jorim.theuns@gmail.com">
         <h3>Interested? Let's talk.</h3>
       </a>
     </div>
@@ -68,14 +62,12 @@ const theme = {
     <div class="flex flex-col justify-center h-dvh pt-16 pb-20">
       <h1>Colophon</h1>
       <h3>This website was designed and coded with love by Jorim Theuns.</h3>
+      <p class="mt-2">Originally hand-built in 2020. Refactored in 2026 with <a href="https://claude.ai/claude-code">Claude Code</a> (Opus 4.6).</p>
       <Image src={code} alt="Code screenshot" class="my-4 max-w-full" />
       <h3>Big thanks to:</h3>
-      <br />
-      <p>Evelien Nieuwenburg, Matus Solcany, Angela Tziafeta and Pranav Muppirishetti for their feedback and encouragement.</p>
-      <br />
-      <h3>Technologies used:</h3>
-      <br />
-      <p>Brackets code editior, Github pages, HTML, CSS, JavaScript, Jquery, P5.js, D3.js, three.js, Adobe Suite, Aframe.</p>
+      <p class="mt-2">Evelien Nieuwenburg, Matus Solcany, Angela Tziafeta and Pranav Muppirishetti for their feedback and encouragement.</p>
+      <h3 class="mt-4">Technologies used:</h3>
+      <p class="mt-2">Astro, Tailwind CSS, Vercel, P5.js, D3.js, three.js, Aframe, Adobe Suite.</p>
     </div>
   </Part>
 </Section>
