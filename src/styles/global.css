@@ -121,7 +121,15 @@ a:focus::after {
 /* === Part layout constraints (matching original portfolio) === */
 
 /* Images and videos inside parts: don't grow, only shrink */
-.part img,
+.part img {
+  flex: 0 1 auto;
+  object-fit: scale-down;
+  object-position: center left;
+  min-height: 0;
+  width: auto;
+  height: auto;
+}
+
 .part video {
   flex: 0 1 auto;
   object-fit: scale-down;
@@ -129,6 +137,7 @@ a:focus::after {
   min-height: 0;
   width: auto;
   height: auto;
+  max-width: fit-content;
 }
 
 /* Audio: flex shrink but keep explicit dimensions */

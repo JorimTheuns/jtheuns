@@ -20,8 +20,12 @@ const {
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content={description} />
     <title>{title}</title>
+    <style>
+      body { opacity: 0; }
+      body.ready { opacity: 1; transition: opacity 0.15s ease; }
+    </style>
   </head>
-  <body class="font-serif bg-black text-[#F0D3D5] overflow-hidden">
+  <body class="font-serif bg-black text-[#F0D3D5] overflow-hidden" onload="this.classList.add('ready')">
     <NavOverlay />
     <div id="scroll-parent" class="h-dvh overflow-x-hidden overflow-y-scroll scroll-smooth" style="scroll-snap-type: y mandatory;">
       <slot />

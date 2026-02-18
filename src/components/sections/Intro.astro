@@ -16,16 +16,19 @@ const theme = {
 ---
 
 <Section title="Jorim Theuns" theme={theme}>
-  <!-- Part 1: Hero / Peek -->
+  <!-- Part 1: Hero / Peek with collage background -->
   <Part variant="peek">
-    <div class="flex flex-col justify-end h-[50vh] pt-16 pb-4">
+    <div class="absolute inset-0 overflow-hidden pointer-events-none">
+      <Image src={collage} alt="" class="w-full h-full object-cover opacity-15" loading="eager" />
+    </div>
+    <div class="flex flex-col justify-end h-[50vh] pt-16 pb-4 relative z-[1]">
       <h1 class="title">Hi there,</h1>
       <h3>I'm a research driven designer who's obsessed with information: data that <span class="highlight">makes a difference.</span></h3>
       <div class="mt-4 h-8 w-full relative overflow-hidden">
         <p class="animate-scroll-hor text-xs leading-6 h-6">Scroll horizontally to navigate parts</p>
       </div>
     </div>
-    <div class="flex flex-col justify-start h-[50vh] pt-4 pb-20">
+    <div class="flex flex-col justify-start h-[50vh] pt-4 pb-20 relative z-[1]">
       <div class="h-8 w-full relative overflow-hidden">
         <p class="animate-scroll-vert text-xs leading-6 h-6">Scroll vertically to navigate sections</p>
       </div>
